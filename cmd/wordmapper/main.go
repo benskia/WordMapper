@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"os"
+
+	"github.com/benskia/WordMapper/internal/weights"
 )
 
 func main() {
@@ -19,6 +21,8 @@ func main() {
 		return
 	}
 
+	mymap := weights.BuildWeightMap(os.Args[1])
+	fmt.Print(mymap)
 
 	// Crawl URL
 	// Fetch HTML and parse into single doc string
