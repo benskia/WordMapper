@@ -8,9 +8,8 @@ import (
 	"strconv"
 )
 
-func BuildWeightMap(filePath string) map[string]int {
-	records := extractRecords(filePath)
-	return recordsToMap(records)
+func CsvToMap(filePath string) map[string]int {
+	return recordsToMap(extractRecords(filePath))
 }
 
 func extractRecords(filePath string) [][]string {

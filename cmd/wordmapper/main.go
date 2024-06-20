@@ -21,7 +21,7 @@ func main() {
 		return
 	}
 
-	mymap := weights.BuildWeightMap(os.Args[1])
+	mymap := weights.CsvToMap(os.Args[1])
 	fmt.Print(mymap)
 
 	// Crawl URL
